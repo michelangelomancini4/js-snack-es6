@@ -7,35 +7,35 @@ let squadre =[
         // Proprietà oggetto
         // nome, punti fatti, falli subiti SQUADRA 1
           nome: "Foggia Calcio",  
-          puntiFatti : 0,
+          puntiFatti : [],
           falliSubiti : 0,
     },
     {
         // Proprietà oggetto
-        // nome, punti fatti, falli subiti SQUADRA 1
+        // nome, punti fatti, falli subiti SQUADRA 2
           nome: "Manchester United",  
-          puntiFatti : 0,
+          puntiFatti : [],
           falliSubiti : 0,
     },
     {
         // Proprietà oggetto
-        // nome, punti fatti, falli subiti SQUADRA 1
+        // nome, punti fatti, falli subiti SQUADRA 3
           nome: "Barletta fc",  
-          puntiFatti : 0,
+          puntiFatti : [],
           falliSubiti : 0,
     },
     {
         // Proprietà oggetto
-        // nome, punti fatti, falli subiti SQUADRA 1
+        // nome, punti fatti, falli subiti SQUADRA 4
           nome: "Bayern Monaco",  
-          puntiFatti : 0,
+          puntiFatti : [],
           falliSubiti : 0,
     },
     {
         // Proprietà oggetto
-        // nome, punti fatti, falli subiti SQUADRA 1
+        // nome, punti fatti, falli subiti SQUADRA 5
           nome: "Lecce",  
-          puntiFatti : 0,
+          puntiFatti : [],
           falliSubiti : 0,
     },
   
@@ -47,6 +47,13 @@ for (let key in squadre){
 }
 
 // Generare numeri random al posto degli 0 nelle proprietà “punti” fatti e “falli subiti”.
+
+for (let i = 0 ; i < squadre.length; i ++) {
+
+    squadre[i].puntiFatti = Math.floor(Math.random() * 80);
+    squadre[i].falliSubiti = Math.floor(Math.random() * 50);
+}
+console.table(squadre);
 
 
 // Infine, creiamo un nuovo array i cui elementi contengono solo nomi e falli subiti e stampiamo tutto in console.
