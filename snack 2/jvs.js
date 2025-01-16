@@ -40,11 +40,6 @@ let squadre =[
     },
   
 ]
-// stampo in console gli oggetti
-for (let key in squadre){
-    console.log(squadre[key]);
-    
-}
 
 // Generare numeri random al posto degli 0 nelle proprietà “punti” fatti e “falli subiti”.
 
@@ -56,4 +51,15 @@ for (let i = 0 ; i < squadre.length; i ++) {
 console.table(squadre);
 
 
-// Infine, creiamo un nuovo array i cui elementi contengono solo nomi e falli subiti e stampiamo tutto in console.
+// Infine, creiamo un nuovo array i cui elementi contengono solo nomi e falli subiti 
+
+let arrayNomiFalli = [];
+for (let i = 0; i < squadre.length; i++) {
+    arrayNomiFalli.push({
+        'nome': squadre[i].nome,
+        'falliSubiti': squadre[i].falliSubiti
+    });
+}
+
+// stampiamo tutto in console.
+console.table(arrayNomiFalli);
